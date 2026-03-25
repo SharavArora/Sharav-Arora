@@ -6,6 +6,7 @@
   <title>Sharav Arora | Portfolio</title>
   <meta name="description" content="Official portfolio of Sharav Arora, 10-year-old tech entrepreneur, author, and founder of TechForges.">
   <meta name="google-site-verification" content="fr2d09LlZHfB9pf28de1iV3JPoPUIMifIhBQ1PQYDk0" />
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -46,6 +47,19 @@
 
 <body class="bg-black text-white font-sans">
 
+  <!-- Landing Page -->
+  <div id="landing" class="fixed inset-0 flex flex-col items-center justify-center bg-black z-50">
+    <h1 class="text-4xl md:text-6xl font-bold mb-6">Sharav Arora</h1>
+    <p class="text-gray-400 mb-8">Tech Entrepreneur • Founder of TechForges</p>
+    <button onclick="enterSite()" class="bg-white text-black px-6 py-3 rounded-xl font-medium hover:opacity-80">Enter</button>
+  </div>
+
+  <script>
+    function enterSite() {
+      document.getElementById('landing').style.display = 'none';
+    }
+  </script>
+
   <!-- Navbar -->
   <header class="fixed top-0 w-full bg-black/80 backdrop-blur border-b border-gray-800 z-50">
     <nav class="max-w-5xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -59,7 +73,19 @@
     </nav>
   </header>
 
-  <main class="pt-20">
+  <main class="pt-20 flex">
+
+    <!-- Sidebar -->
+    <aside class="hidden md:block w-64 border-r border-gray-800 p-6 text-sm text-gray-400">
+      <p class="mb-4">Quick Info</p>
+      <ul class="space-y-2">
+        <li>Founder: TechForges</li>
+        <li>Focus: SaaS & Automation</li>
+        <li>Author: 3 Books</li>
+      </ul>
+    </aside>
+
+    <div class="flex-1">
 
     <!-- Hero -->
     <section class="max-w-5xl mx-auto px-4 py-16 flex flex-col gap-6">
@@ -157,6 +183,7 @@
       </div>
     </section>
 
+      </div>
   </main>
 
   <!-- Footer -->
